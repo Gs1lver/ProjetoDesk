@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Estudio
 {
-    public partial class Form1 : Form
+    public partial class MenuLogin : Form
     {
-        public Form1()
+        public MenuLogin()
         {
             InitializeComponent();
 
@@ -32,15 +32,29 @@ namespace Estudio
             {
                 MessageBox.Show("Usuário ADM");
                 grpValidacao.Visible = false;
-                //menuStrip.Enabled = true;
+                arquivoMenuStrip.Enabled = true;
             }
             if (tipo == 2)
             {
                 MessageBox.Show("Usuário Restrito");
                 grpValidacao.Visible = false;
-                //menuStrip1.Enabled = true;
-                //cadastrarLoginToolStripMenuItem.Enabled = false;
+                cadastroAlunoToolStripMenuItem.Enabled = true;
+                cadastroLoginToolStripMenuItem.Enabled = false;
             }
+        }
+
+        private void cadastroAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroAluno cadastroAl = new CadastroAluno();
+            cadastroAl.MdiParent = this;
+            cadastroAl.Show();
+        }
+
+        private void cadastroLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroUsuario cadastroLog = new CadastroUsuario();
+            cadastroLog.MdiParent = this;
+            cadastroLog.Show();
         }
     }
 }
