@@ -23,7 +23,7 @@ namespace Estudio
         private string Email;
         private byte[] Foto;
         private bool Ativo;
-
+        private string text;
 
         public Aluno(string cpf, string nome, string rua , string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email)
         {
@@ -39,8 +39,38 @@ namespace Estudio
             setEstado(estado);
             setTelefone(telefone);
             setEmail(email);
-        }   
+        }
+        public Aluno()
+        {
 
+        }
+        public Aluno(string cpf)
+        {
+            setCpf(cpf);
+        }
+
+        public bool consultarAluno()
+        {
+            bool existe = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno " + "WHERE CPFAluno = '" + CPF + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally{
+                DAO_Conexao.con.Close();
+            }
+            return existe;
+        }
         public bool cadastrarAluno()
         {
             bool cad = false;
@@ -63,6 +93,30 @@ namespace Estudio
             return cad;
 
         }
+
+        public bool excluirAluno()
+        {
+            bool exc = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand exclui = new MySqlCommand("update Estudio_Aluno set ativo " +
+                    "= 1 where CPFAluno = '" + CPF + "'", DAO_Conexao.con);
+                //Console.Writeline("update Estudio_Aluno set ativo = 1 where CPFAluno = '" + CPF +
+                exclui.ExecuteNonQuery();
+                exc = true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return exc;
+        }
+
         public void setCpf(string CPF)
         {
             this.CPF = CPF;

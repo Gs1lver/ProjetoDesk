@@ -29,7 +29,6 @@ namespace Estudio
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.arquivoMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,18 +41,10 @@ namespace Estudio
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.exclusãoAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.grpValidacao.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(619, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // menuStrip2
             // 
@@ -71,6 +62,7 @@ namespace Estudio
             this.arquivoMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroAlunoToolStripMenuItem,
             this.cadastroLoginToolStripMenuItem,
+            this.exclusãoAlunoToolStripMenuItem,
             this.toolStripMenuItem1,
             this.sairToolStripMenuItem});
             this.arquivoMenuStrip.Enabled = false;
@@ -81,26 +73,26 @@ namespace Estudio
             // cadastroAlunoToolStripMenuItem
             // 
             this.cadastroAlunoToolStripMenuItem.Name = "cadastroAlunoToolStripMenuItem";
-            this.cadastroAlunoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cadastroAlunoToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.cadastroAlunoToolStripMenuItem.Text = "Cadastro Aluno";
             this.cadastroAlunoToolStripMenuItem.Click += new System.EventHandler(this.cadastroAlunoToolStripMenuItem_Click);
             // 
             // cadastroLoginToolStripMenuItem
             // 
             this.cadastroLoginToolStripMenuItem.Name = "cadastroLoginToolStripMenuItem";
-            this.cadastroLoginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cadastroLoginToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.cadastroLoginToolStripMenuItem.Text = "Cadastro Login";
             this.cadastroLoginToolStripMenuItem.Click += new System.EventHandler(this.cadastroLoginToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // grpValidacao
@@ -110,7 +102,7 @@ namespace Estudio
             this.grpValidacao.Controls.Add(this.txtLogin);
             this.grpValidacao.Controls.Add(this.label2);
             this.grpValidacao.Controls.Add(this.label1);
-            this.grpValidacao.Location = new System.Drawing.Point(89, 125);
+            this.grpValidacao.Location = new System.Drawing.Point(89, 107);
             this.grpValidacao.Margin = new System.Windows.Forms.Padding(4);
             this.grpValidacao.Name = "grpValidacao";
             this.grpValidacao.Padding = new System.Windows.Forms.Padding(4);
@@ -167,19 +159,25 @@ namespace Estudio
             this.label1.TabIndex = 0;
             this.label1.Text = "Login:";
             // 
+            // exclusãoAlunoToolStripMenuItem
+            // 
+            this.exclusãoAlunoToolStripMenuItem.Name = "exclusãoAlunoToolStripMenuItem";
+            this.exclusãoAlunoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exclusãoAlunoToolStripMenuItem.Text = "Exclusão Aluno";
+            this.exclusãoAlunoToolStripMenuItem.Click += new System.EventHandler(this.exclusãoAlunoToolStripMenuItem_Click);
+            // 
             // MenuLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 438);
+            this.ClientSize = new System.Drawing.Size(619, 415);
             this.Controls.Add(this.grpValidacao);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuLogin";
             this.Text = "Estúdio";
+            this.Load += new System.EventHandler(this.MenuLogin_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.grpValidacao.ResumeLayout(false);
@@ -190,8 +188,6 @@ namespace Estudio
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem arquivoMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem cadastroAlunoToolStripMenuItem;
@@ -204,6 +200,7 @@ namespace Estudio
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exclusãoAlunoToolStripMenuItem;
     }
 }
 

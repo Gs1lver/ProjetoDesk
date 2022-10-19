@@ -33,3 +33,4 @@ C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.pdb
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.CadastroAluno.resources
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.CadastroUsuario.resources
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.MenuLogin.resources
+C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.ExcluirAluno.resources

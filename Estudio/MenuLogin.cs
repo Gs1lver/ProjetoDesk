@@ -56,5 +56,17 @@ namespace Estudio
             cadastroLog.MdiParent = this;
             cadastroLog.Show();
         }
+
+        private void MenuLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exclusãoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcluirAluno excluirAl = new ExcluirAluno();
+            excluirAl.MdiParent = this;
+            excluirAl.Show();
+        }
     }
 }

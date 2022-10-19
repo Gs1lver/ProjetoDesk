@@ -155,6 +155,7 @@
             this.mtxCpf.Size = new System.Drawing.Size(141, 22);
             this.mtxCpf.TabIndex = 13;
             this.mtxCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            this.mtxCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxCpf_KeyPress);
             // 
             // txtCidade
             // 
@@ -275,7 +276,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 89);
+            this.label2.Location = new System.Drawing.Point(27, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 1;
@@ -284,7 +285,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 49);
+            this.label1.Location = new System.Drawing.Point(35, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 0;
@@ -311,12 +312,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(862, 415);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.grpDados);
             this.Name = "CadastroAluno";
             this.Text = "CadastroAluno";
+            this.Load += new System.EventHandler(this.CadastroAluno_Load);
             this.grpDados.ResumeLayout(false);
             this.grpDados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();

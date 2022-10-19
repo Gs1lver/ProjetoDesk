@@ -63,6 +63,12 @@
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO_Conexao.cs" />
+    <Compile Include="ExcluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirAluno.Designer.cs">
+      <DependentUpon>ExcluirAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroUsuario.resx">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirAluno.resx">
+      <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuLogin.resx">
       <DependentUpon>MenuLogin.cs</DependentUpon>

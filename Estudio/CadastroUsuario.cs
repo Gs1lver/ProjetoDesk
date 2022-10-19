@@ -17,6 +17,13 @@ namespace Estudio
             InitializeComponent();
         }
 
+        public void limparCampos()
+        {
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            cboTipo.SelectedIndex = -1;
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             int tipo = 0;
@@ -28,6 +35,7 @@ namespace Estudio
                 MessageBox.Show("Cadastro realizado com sucesso");
             else
                 MessageBox.Show("Erro de cadastro");
+            limparCampos();
         }
     }
 }
