@@ -56,6 +56,12 @@
     <Compile Include="CadastroAluno.Designer.cs">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroModalidade.Designer.cs">
+      <DependentUpon>CadastroModalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,22 +75,35 @@
     <Compile Include="ExcluirAluno.Designer.cs">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirModalidade.Designer.cs">
+      <DependentUpon>ExcluirModalidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuLogin.Designer.cs">
       <DependentUpon>MenuLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modalidade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroModalidade.resx">
+      <DependentUpon>CadastroModalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroUsuario.resx">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirAluno.resx">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirModalidade.resx">
+      <DependentUpon>ExcluirModalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuLogin.resx">
       <DependentUpon>MenuLogin.cs</DependentUpon>
