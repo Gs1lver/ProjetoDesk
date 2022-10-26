@@ -26,15 +26,16 @@ namespace Estudio
                 if (mod.excluirModalidade())
                 {
                     MessageBox.Show("Modalidade excluída com sucesso!");
+                    cmbExcluiDescModDisplay();
                 }
             }
             cmbDescExcluiMod.Text = "";
-        }
+;        }
 
         public void cmbExcluiDescModDisplay()
         {
             DAO_Conexao.con.Open();
-            MySqlCommand comando = new MySqlCommand("SELECT descricaoModalidade, idEstudio_Modalidade from Estudio_Modalidade", DAO_Conexao.con);
+            MySqlCommand comando = new MySqlCommand("SELECT descricaoModalidade, idEstudio_Modalidade from Estudio_Modalidade WHERE ativa = 0", DAO_Conexao.con);
             MySqlDataReader dataR = comando.ExecuteReader();
             while (dataR.Read())
             {
@@ -44,10 +45,6 @@ namespace Estudio
                 
             }
             DAO_Conexao.con.Close();
-        }
-        private void cmbDescExcluiMod_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private void ExcluirModalidade_Load(object sender, EventArgs e)

@@ -64,7 +64,6 @@
             this.cmbDescExcluiMod.Name = "cmbDescExcluiMod";
             this.cmbDescExcluiMod.Size = new System.Drawing.Size(338, 24);
             this.cmbDescExcluiMod.TabIndex = 1;
-            this.cmbDescExcluiMod.SelectedIndexChanged += new System.EventHandler(this.cmbDescExcluiMod_SelectedIndexChanged);
             // 
             // lblDescExcluirMod
             // 

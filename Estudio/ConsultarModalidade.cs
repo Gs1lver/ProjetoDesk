@@ -18,10 +18,15 @@ namespace Estudio
             InitializeComponent();
         }
 
+        public void limparCampos()
+        {
+            
+        }
+
         public void cmbDescModDisplay()
         {
             DAO_Conexao.con.Open();
-            MySqlCommand comando = new MySqlCommand("SELECT descricaoModalidade, idEstudio_Modalidade from Estudio_Modalidade", DAO_Conexao.con);
+            MySqlCommand comando = new MySqlCommand("SELECT descricaoModalidade, idEstudio_Modalidade FROM Estudio_Modalidade WHERE ativa = 0", DAO_Conexao.con);
             MySqlDataReader dataR = comando.ExecuteReader();
             while (dataR.Read())
             {
@@ -44,16 +49,43 @@ namespace Estudio
             MySqlDataReader dataR = comando.ExecuteReader();
             while (dataR.Read())
             {
-                txtPrecoConsult.Text = dataR[0].ToString(); //what do I do indiando :(
+                txtPrecoConsult.Text = dataR[0].ToString(); 
                 txtQtdeAlunosConsult.Text = dataR[1].ToString();
                 txtQtdeAulasConsult.Text = dataR[2].ToString();
 
                 txtPrecoConsult.Enabled = false;
                 txtQtdeAlunosConsult.Enabled = false;
                 txtQtdeAulasConsult.Enabled = false;
-                btnAtualizar.Visible = false;
             }
             DAO_Conexao.con.Close();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            cmbDescConsult.Enabled = false;
+            txtPrecoConsult.Enabled = true;
+            txtQtdeAlunosConsult.Enabled = true;
+            txtQtdeAulasConsult.Enabled = true;
+            btnSalvarMod.Visible = true;
+            btnAtualizar.Enabled = false;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Modalidade mod = new Modalidade(cmbDescConsult.Text, float.Parse(txtPrecoConsult.Text), int.Parse(txtQtdeAlunosConsult.Text), int.Parse(txtQtdeAulasConsult.Text));
+            if (mod.atualizarModalidade())
+                MessageBox.Show("Cadastro realizado com sucesso");
+            else
+                MessageBox.Show("Erro no cadastro.");
+            limparCampos();
+            txtPrecoConsult.Enabled = false;
+            txtQtdeAlunosConsult.Enabled = false;
+            txtQtdeAulasConsult.Enabled = false;
+            cmbDescConsult.Enabled = true;
+            btnSalvarMod.Enabled = false;
+            btnAtualizar.Enabled = true;
+
+
         }
     }
 }

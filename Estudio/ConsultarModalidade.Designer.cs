@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpConsultMod = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.txtQtdeAulasConsult = new System.Windows.Forms.TextBox();
             this.txtQtdeAlunosConsult = new System.Windows.Forms.TextBox();
@@ -38,26 +38,28 @@
             this.lblQtdeAlunosConsult = new System.Windows.Forms.Label();
             this.lblPrecoConsult = new System.Windows.Forms.Label();
             this.lblDescConsult = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.btnSalvarMod = new System.Windows.Forms.Button();
+            this.grpConsultMod.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpConsultMod
             // 
-            this.groupBox1.Controls.Add(this.btnAtualizar);
-            this.groupBox1.Controls.Add(this.txtQtdeAulasConsult);
-            this.groupBox1.Controls.Add(this.txtQtdeAlunosConsult);
-            this.groupBox1.Controls.Add(this.txtPrecoConsult);
-            this.groupBox1.Controls.Add(this.cmbDescConsult);
-            this.groupBox1.Controls.Add(this.lblQtdeAulasConsult);
-            this.groupBox1.Controls.Add(this.lblQtdeAlunosConsult);
-            this.groupBox1.Controls.Add(this.lblPrecoConsult);
-            this.groupBox1.Controls.Add(this.lblDescConsult);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(683, 326);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modalidades";
+            this.grpConsultMod.Controls.Add(this.btnSalvarMod);
+            this.grpConsultMod.Controls.Add(this.btnAtualizar);
+            this.grpConsultMod.Controls.Add(this.txtQtdeAulasConsult);
+            this.grpConsultMod.Controls.Add(this.txtQtdeAlunosConsult);
+            this.grpConsultMod.Controls.Add(this.txtPrecoConsult);
+            this.grpConsultMod.Controls.Add(this.cmbDescConsult);
+            this.grpConsultMod.Controls.Add(this.lblQtdeAulasConsult);
+            this.grpConsultMod.Controls.Add(this.lblQtdeAlunosConsult);
+            this.grpConsultMod.Controls.Add(this.lblPrecoConsult);
+            this.grpConsultMod.Controls.Add(this.lblDescConsult);
+            this.grpConsultMod.Location = new System.Drawing.Point(12, 12);
+            this.grpConsultMod.Name = "grpConsultMod";
+            this.grpConsultMod.Size = new System.Drawing.Size(683, 326);
+            this.grpConsultMod.TabIndex = 0;
+            this.grpConsultMod.TabStop = false;
+            this.grpConsultMod.Text = "Modalidades";
             // 
             // btnAtualizar
             // 
@@ -67,6 +69,7 @@
             this.btnAtualizar.TabIndex = 6;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // txtQtdeAulasConsult
             // 
@@ -134,26 +137,37 @@
             this.lblDescConsult.TabIndex = 0;
             this.lblDescConsult.Text = "Descrição:";
             // 
+            // btnSalvarMod
+            // 
+            this.btnSalvarMod.Location = new System.Drawing.Point(161, 266);
+            this.btnSalvarMod.Name = "btnSalvarMod";
+            this.btnSalvarMod.Size = new System.Drawing.Size(93, 32);
+            this.btnSalvarMod.TabIndex = 6;
+            this.btnSalvarMod.Text = "Salvar";
+            this.btnSalvarMod.UseVisualStyleBackColor = true;
+            this.btnSalvarMod.Visible = false;
+            this.btnSalvarMod.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // ConsultarModalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 352);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpConsultMod);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultarModalidade";
             this.Text = "Consultar Modalidade";
             this.Load += new System.EventHandler(this.ConsultarModalidade_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpConsultMod.ResumeLayout(false);
+            this.grpConsultMod.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpConsultMod;
         private System.Windows.Forms.TextBox txtQtdeAulasConsult;
         private System.Windows.Forms.TextBox txtQtdeAlunosConsult;
         private System.Windows.Forms.TextBox txtPrecoConsult;
@@ -163,5 +177,6 @@
         private System.Windows.Forms.Label lblPrecoConsult;
         private System.Windows.Forms.Label lblDescConsult;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnSalvarMod;
     }
 }

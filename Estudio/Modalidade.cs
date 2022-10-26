@@ -69,6 +69,30 @@ namespace Estudio
             return cad;
         }
 
+
+        public bool atualizarModalidade()
+        {
+            bool att = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                string sql = "update Estudio_Modalidade set descricaoModalidade ='" + Descricao + "', precoModalidade ='" + Preco + "', qtdeAlunos ='" + Qtde_alunos + "', qtdeAulas = '" + Qtde_aulas + "' WHERE descricaoModalidade = '" + Descricao + "' limit 1";
+                MySqlCommand atualizar = new MySqlCommand(sql, DAO_Conexao.con);
+                atualizar.ExecuteNonQuery();
+                att = true; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+
+            return att;
+        }
+
         public bool consultarModalidade()
         {
             bool existe = false;
@@ -99,10 +123,6 @@ namespace Estudio
           
         }*/
 
-        /*public bool atualizarModalidade()
-        {
-
-        }*/
 
         public bool excluirModalidade()
         {
@@ -125,32 +145,6 @@ namespace Estudio
             return exc;
         }
 
-        //Método do Wannakry
-        /*
-        public static Boolean dadosNoComboBox()
-        {
-            bool add = false;
-            try
-            {
-                DAO_Conexao.con.Open();
-                MySqlCommand adicionar = new MySqlCommand("SELECT descModal from ModalCS", DAO_Conexao.con);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("SELECT descModal from ModalCS", DAO_Conexao.con);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet);
-                adicionar.ExecuteNonQuery();
-                DAO_Conexao.con.Close();
-                add = true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
-            }
-            return add;
-        }*/
+       
     }
 }
