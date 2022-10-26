@@ -20,8 +20,9 @@ namespace Estudio
 
         private void btnExcluirMod_Click(object sender, EventArgs e)
         {
+            cmbDescExcluiMod.Items.Clear();
             Modalidade mod = new Modalidade(cmbDescExcluiMod.Text);
-            if (mod.consultarModalidade()) // resolver consultarModalidade
+            if (mod.consultarModalidade()) 
             {
                 if (mod.excluirModalidade())
                 {

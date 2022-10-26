@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,7 +78,9 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into Estudio_Aluno (CPFAluno, nomeAluno, ruaAluno, numeroAluno, bairroAluno, complementoAluno, CEPAluno, cidadeAluno, estadoAluno, telefoneAluno, emailAluno) values('" + CPF + "','" + Nome + "','" + Rua + "','" + Numero + "','" + Bairro + "','" + Complemento + "','" + CEP + "','" + Cidade + "','" + Estado + "','" + Telefone + "','" + Email + "')", DAO_Conexao.con);                //insere.Parameters.AddWithValue("foto", this.foto);
+                string sql = "insert into Estudio_Aluno (CPFAluno, nomeAluno, ruaAluno, numeroAluno, bairroAluno, complementoAluno, CEPAluno, cidadeAluno, estadoAluno, telefoneAluno, emailAluno) values('" + CPF + "','" + Nome + "','" + Rua + "','" + Numero + "','" + Bairro + "','" + Complemento + "','" + CEP + "','" + Cidade + "','" + Estado + "','" + Telefone + "','" + Email + "')";//insere.Parameters.AddWithValue("foto", this.foto);
+                MessageBox.Show(sql);
+                MySqlCommand insere = new MySqlCommand(sql, DAO_Conexao.con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
@@ -186,7 +189,7 @@ namespace Estudio
         }
         public void setCidade(string cidade)
         {
-            this.CEP = cidade;
+            this.Cidade = cidade;
         }
 
         public string getCidade()
