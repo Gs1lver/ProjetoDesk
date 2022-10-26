@@ -53,7 +53,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand inserir = new MySqlCommand("insert into Estudio_Modalidade (idEstudo_Moidalidade, descricaoModalidade, precoModalidade, qtdeAlunos, qtdeAulas) values ('" + Descricao + "','" + Preco + "','" + Qtde_alunos + "','" + Qtde_aulas + "')", DAO_Conexao.con);
+                MySqlCommand inserir = new MySqlCommand("insert into Estudio_Modalidade (descricaoModalidade, precoModalidade, qtdeAlunos, qtdeAulas) values ('" + Descricao + "','" + Preco + "','" + Qtde_alunos + "','" + Qtde_aulas + "')", DAO_Conexao.con);
                 inserir.ExecuteNonQuery();
                 cad = true;
             }

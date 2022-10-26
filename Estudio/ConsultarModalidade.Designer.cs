@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnConsult = new System.Windows.Forms.Button();
             this.txtQtdeAulasConsult = new System.Windows.Forms.TextBox();
             this.txtQtdeAlunosConsult = new System.Windows.Forms.TextBox();
             this.txtPrecoConsult = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAtualizar);
-            this.groupBox1.Controls.Add(this.btnConsult);
             this.groupBox1.Controls.Add(this.txtQtdeAulasConsult);
             this.groupBox1.Controls.Add(this.txtQtdeAlunosConsult);
             this.groupBox1.Controls.Add(this.txtPrecoConsult);
@@ -63,23 +61,12 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(181, 266);
+            this.btnAtualizar.Location = new System.Drawing.Point(53, 266);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(93, 32);
             this.btnAtualizar.TabIndex = 6;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnConsult
-            // 
-            this.btnConsult.Location = new System.Drawing.Point(56, 266);
-            this.btnConsult.Name = "btnConsult";
-            this.btnConsult.Size = new System.Drawing.Size(93, 32);
-            this.btnConsult.TabIndex = 6;
-            this.btnConsult.Text = "Consultar";
-            this.btnConsult.UseVisualStyleBackColor = true;
-            this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
             // 
             // txtQtdeAulasConsult
             // 
@@ -109,6 +96,7 @@
             this.cmbDescConsult.Name = "cmbDescConsult";
             this.cmbDescConsult.Size = new System.Drawing.Size(271, 24);
             this.cmbDescConsult.TabIndex = 4;
+            this.cmbDescConsult.SelectedIndexChanged += new System.EventHandler(this.cmbDescConsult_SelectedIndexChanged);
             // 
             // lblQtdeAulasConsult
             // 
@@ -156,6 +144,7 @@
             this.MinimizeBox = false;
             this.Name = "ConsultarModalidade";
             this.Text = "Consultar Modalidade";
+            this.Load += new System.EventHandler(this.ConsultarModalidade_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -165,7 +154,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.TextBox txtQtdeAulasConsult;
         private System.Windows.Forms.TextBox txtQtdeAlunosConsult;
         private System.Windows.Forms.TextBox txtPrecoConsult;
