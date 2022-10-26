@@ -16,12 +16,15 @@ namespace Estudio
         private string Descricao;
         private float Preco;
         private int qtde_alunos, qtde_aulas;
+        private int idMod;
 
         //getters e setters
+
         public string Descricao1 { get => Descricao; set => Descricao = value; }
         public float Preco1 { get => Preco; set => Preco = value; }
         public int Qtde_alunos { get => qtde_alunos; set => qtde_alunos = value; }
         public int Qtde_aulas { get => qtde_aulas; set => qtde_aulas = value; }
+        public int IdMod { get => idMod; set => idMod = value; }
 
         //construtores
         public Modalidade(string descricao, string preco, string qtde_alunos, string qtde_aulas)
@@ -66,15 +69,15 @@ namespace Estudio
             return cad;
         }
 
-        /*public MySqlDataReader consultarModalidade()
+        public bool consultarModalidade()
         {
             bool existe = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade " + "WHERE descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade WHERE descricaoModalidade ='" + Descricao + "'", DAO_Conexao.con);
+                MySqlDataReader result = consulta.ExecuteReader();
+                if (result.Read())
                 {
                     existe = true;
                 }
@@ -87,8 +90,9 @@ namespace Estudio
             {
                 DAO_Conexao.con.Close();
             }
+
             return existe;
-        }*/
+        }
 
         /*public MySqlDataReader consultarTodasModalidades()
         {
@@ -116,7 +120,7 @@ namespace Estudio
         /*public bool atualizarModalidade()
         {
 
-        }*/   
+        }*/
 
         public bool excluirModalidade()
         {
