@@ -34,7 +34,7 @@
             this.txtQtdeAulas = new System.Windows.Forms.TextBox();
             this.txtQtdeAlunos = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.txtDescModalidade = new System.Windows.Forms.TextBox();
+            this.cmbDescModalidade = new System.Windows.Forms.TextBox();
             this.lblQtdeAulas = new System.Windows.Forms.Label();
             this.lblQtdeAlunos = new System.Windows.Forms.Label();
             this.lblPreco = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.grpCadastrarMod.Controls.Add(this.txtQtdeAulas);
             this.grpCadastrarMod.Controls.Add(this.txtQtdeAlunos);
             this.grpCadastrarMod.Controls.Add(this.txtPreco);
-            this.grpCadastrarMod.Controls.Add(this.txtDescModalidade);
+            this.grpCadastrarMod.Controls.Add(this.cmbDescModalidade);
             this.grpCadastrarMod.Controls.Add(this.lblQtdeAulas);
             this.grpCadastrarMod.Controls.Add(this.lblQtdeAlunos);
             this.grpCadastrarMod.Controls.Add(this.lblPreco);
@@ -70,12 +70,13 @@
             // 
             // btnCadastrarMod
             // 
-            this.btnCadastrarMod.Location = new System.Drawing.Point(60, 261);
+            this.btnCadastrarMod.Location = new System.Drawing.Point(60, 264);
             this.btnCadastrarMod.Name = "btnCadastrarMod";
             this.btnCadastrarMod.Size = new System.Drawing.Size(130, 32);
             this.btnCadastrarMod.TabIndex = 8;
             this.btnCadastrarMod.Text = "Cadastrar";
             this.btnCadastrarMod.UseVisualStyleBackColor = true;
+            this.btnCadastrarMod.Click += new System.EventHandler(this.btnCadastrarMod_Click);
             // 
             // txtQtdeAulas
             // 
@@ -98,12 +99,12 @@
             this.txtPreco.Size = new System.Drawing.Size(117, 22);
             this.txtPreco.TabIndex = 5;
             // 
-            // txtDescModalidade
+            // cmbDescModalidade
             // 
-            this.txtDescModalidade.Location = new System.Drawing.Point(179, 60);
-            this.txtDescModalidade.Name = "txtDescModalidade";
-            this.txtDescModalidade.Size = new System.Drawing.Size(323, 22);
-            this.txtDescModalidade.TabIndex = 4;
+            this.cmbDescModalidade.Location = new System.Drawing.Point(179, 60);
+            this.cmbDescModalidade.Name = "cmbDescModalidade";
+            this.cmbDescModalidade.Size = new System.Drawing.Size(323, 22);
+            this.cmbDescModalidade.TabIndex = 4;
             // 
             // lblQtdeAulas
             // 
@@ -145,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 346);
+            this.ClientSize = new System.Drawing.Size(648, 346);
             this.Controls.Add(this.grpCadastrarMod);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -167,7 +168,7 @@
         private System.Windows.Forms.Label lblQtdeAlunos;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblDescCadastrarMod;
-        private System.Windows.Forms.TextBox txtDescModalidade;
+        private System.Windows.Forms.TextBox cmbDescModalidade;
         private System.Windows.Forms.Button btnCadastrarMod;
         private System.Windows.Forms.TextBox txtQtdeAulas;
         private System.Windows.Forms.TextBox txtQtdeAlunos;

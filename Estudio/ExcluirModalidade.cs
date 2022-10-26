@@ -16,5 +16,17 @@ namespace Estudio
         {
             InitializeComponent();
         }
+
+        private void btnExcluirMod_Click(object sender, EventArgs e)
+        {
+            Modalidade mod = new Modalidade(cmbDescExcluiMod.Text);
+            if (mod.consultarModalidade()) // resolver consultarModalidade
+            {
+                if (mod.excluirModalidade())
+                {
+                    MessageBox.Show("Modalidade excluída com sucesso!");
+                }
+            }
+        }
     }
 }

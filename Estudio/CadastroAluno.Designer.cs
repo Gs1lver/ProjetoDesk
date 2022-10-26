@@ -317,6 +317,8 @@
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.grpDados);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroAluno";
             this.Text = "CadastroAluno";
             this.Load += new System.EventHandler(this.CadastroAluno_Load);

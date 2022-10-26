@@ -1,9 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Estudio
 {
@@ -12,7 +16,7 @@ namespace Estudio
         private string Descricao;
         private float Preco;
         private int qtde_alunos, qtde_aulas;
-        
+
         //getters e setters
         public string Descricao1 { get => Descricao; set => Descricao = value; }
         public float Preco1 { get => Preco; set => Preco = value; }
@@ -20,7 +24,7 @@ namespace Estudio
         public int Qtde_aulas { get => qtde_aulas; set => qtde_aulas = value; }
 
         //construtores
-        public Modalidade(string descricao, float preco, int qtde_alunos, int qtde_aulas)
+        public Modalidade(string descricao, string preco, string qtde_alunos, string qtde_aulas)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl201289", "cl201289", "cl*11102005");
             Descricao = descricao;
@@ -59,17 +63,40 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
 
-            return cad; 
+            return cad;
         }
-        
+
         /*public MySqlDataReader consultarModalidade()
         {
             bool existe = false;
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consultar = new MySqlCommand("SELECT * FROM Estudio_Modalidade" + "WHERE descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
-                MySqlDataReader result = consultar.ExecuteReader();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Modalidade " + "WHERE descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return existe;
+        }*/
+
+        /*public MySqlDataReader consultarTodasModalidades()
+        {
+            bool existe = false;
+            try
+            {
+                MySqlCommand consultarTodos = new MySqlCommand("SELECT * FROM Estudio_Modalidade" + "'", DAO_Conexao.con);
+                MySqlDataReader result = consultarTodos.ExecuteReader();
                 if (result.Read())
                 {
                     existe = true;
@@ -83,16 +110,15 @@ namespace Estudio
             {
                 DAO_Conexao.con.Close();
             }
-
-            return existe;//??
+           return existe;
         }*/
 
-        //public MySqlDataReader consultarTodasModalidades()
-        
+        /*public bool atualizarModalidade()
+        {
 
-        //public bool atualizarModalidade()
+        }*/   
 
-        public bool excluirModalide()
+        public bool excluirModalidade()
         {
             bool exc = false;
             try
@@ -112,5 +138,33 @@ namespace Estudio
             }
             return exc;
         }
+
+        //Método do Wannakry
+        /*
+        public static Boolean dadosNoComboBox()
+        {
+            bool add = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand adicionar = new MySqlCommand("SELECT descModal from ModalCS", DAO_Conexao.con);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("SELECT descModal from ModalCS", DAO_Conexao.con);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet);
+                adicionar.ExecuteNonQuery();
+                DAO_Conexao.con.Close();
+                add = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return add;
+        }*/
     }
 }

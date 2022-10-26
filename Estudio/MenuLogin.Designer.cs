@@ -210,6 +210,8 @@ namespace Estudio
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MenuLogin";
             this.Text = "Estúdio";
             this.menuStrip2.ResumeLayout(false);

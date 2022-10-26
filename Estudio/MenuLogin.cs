@@ -28,6 +28,8 @@ namespace Estudio
             if (tipo == 0)
             
                 MessageBox.Show("Usuario/Senha inválidos");
+                txtLogin.Text = "";
+                txtSenha.Text = "";
             if (tipo == 1)
             {
                 MessageBox.Show("Usuário ADM");

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnConsult = new System.Windows.Forms.Button();
             this.txtQtdeAulasConsult = new System.Windows.Forms.TextBox();
             this.txtQtdeAlunosConsult = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.lblQtdeAlunosConsult = new System.Windows.Forms.Label();
             this.lblPrecoConsult = new System.Windows.Forms.Label();
             this.lblDescConsult = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,12 +54,22 @@
             this.groupBox1.Controls.Add(this.lblQtdeAlunosConsult);
             this.groupBox1.Controls.Add(this.lblPrecoConsult);
             this.groupBox1.Controls.Add(this.lblDescConsult);
-            this.groupBox1.Location = new System.Drawing.Point(58, 44);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(683, 326);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modalidades";
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(181, 266);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(93, 32);
+            this.btnAtualizar.TabIndex = 6;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnConsult
             // 
@@ -69,6 +79,7 @@
             this.btnConsult.TabIndex = 6;
             this.btnConsult.Text = "Consultar";
             this.btnConsult.UseVisualStyleBackColor = true;
+            this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
             // 
             // txtQtdeAulasConsult
             // 
@@ -135,20 +146,11 @@
             this.lblDescConsult.TabIndex = 0;
             this.lblDescConsult.Text = "Descrição:";
             // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(181, 266);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(93, 32);
-            this.btnAtualizar.TabIndex = 6;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            // 
             // ConsultarModalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(714, 352);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

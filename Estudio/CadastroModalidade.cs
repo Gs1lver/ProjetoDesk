@@ -17,5 +17,22 @@ namespace Estudio
             InitializeComponent();
         }
 
+        public void limparCampos()
+        {
+            cmbDescModalidade.Text = "";
+            txtPreco.Text = "";
+            txtQtdeAlunos.Text = "";
+            txtQtdeAulas.Text = "";
+        }
+
+        private void btnCadastrarMod_Click(object sender, EventArgs e)
+        {
+            Modalidade mod = new Modalidade(cmbDescModalidade.Text, txtPreco.Text, txtQtdeAlunos.Text, txtQtdeAulas.Text);
+            if (mod.cadastrarModalidade())
+                MessageBox.Show("Cadastro realizado com sucesso");
+            else
+                MessageBox.Show("Erro no cadastro.");
+            limparCampos();
+        }
     }
 }

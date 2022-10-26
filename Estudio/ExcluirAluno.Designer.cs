@@ -57,6 +57,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblExcluiCpf);
             this.Controls.Add(this.mtxCpfExcluir);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ExcluirAluno";
             this.Text = "ExcluirAluno";
             this.ResumeLayout(false);

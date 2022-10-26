@@ -16,5 +16,15 @@ namespace Estudio
         {
             InitializeComponent();
         }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
