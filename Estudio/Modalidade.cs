@@ -27,7 +27,7 @@ namespace Estudio
         public int IdMod { get => idMod; set => idMod = value; }
 
         //construtores
-        public Modalidade(string descricao, string preco, string qtde_alunos, string qtde_aulas)
+        public Modalidade(string descricao, float preco, int qtde_alunos, int qtde_aulas)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl201289", "cl201289", "cl*11102005");
             Descricao = descricao;
@@ -96,25 +96,7 @@ namespace Estudio
 
         /*public MySqlDataReader consultarTodasModalidades()
         {
-            bool existe = false;
-            try
-            {
-                MySqlCommand consultarTodos = new MySqlCommand("SELECT * FROM Estudio_Modalidade" + "'", DAO_Conexao.con);
-                MySqlDataReader result = consultarTodos.ExecuteReader();
-                if (result.Read())
-                {
-                    existe = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                DAO_Conexao.con.Close();
-            }
-           return existe;
+          
         }*/
 
         /*public bool atualizarModalidade()
