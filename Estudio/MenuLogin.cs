@@ -57,16 +57,37 @@ namespace Estudio
             cadastroLog.Show();
         }
 
-        private void MenuLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void exclusãoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcluirAluno excluirAl = new ExcluirAluno();
             excluirAl.MdiParent = this;
             excluirAl.Show();
+        }
+
+        private void cadastroModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroModalidade cadastroMod = new CadastroModalidade();
+            cadastroMod.MdiParent = this;
+            cadastroMod.Show();
+        }
+
+        private void exclusãoModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcluirModalidade excluirMod = new ExcluirModalidade();
+            excluirMod.MdiParent = this;
+            excluirMod.Show();
+        }
+
+        private void consultaModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarModalidade consultarMod = new ConsultarModalidade();
+            consultarMod.MdiParent = this;
+            consultarMod.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.ExitThread();
         }
     }
 }

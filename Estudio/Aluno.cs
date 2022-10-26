@@ -117,6 +117,8 @@ namespace Estudio
             return exc;
         }
 
+
+        //getters e setters
         public void setCpf(string CPF)
         {
             this.CPF = CPF;

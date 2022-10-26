@@ -22,6 +22,7 @@ namespace Estudio
         //construtores
         public Modalidade(string descricao, float preco, int qtde_alunos, int qtde_aulas)
         {
+            DAO_Conexao.getConexao("143.106.241.3", "cl201289", "cl201289", "cl*11102005");
             Descricao = descricao;
             Preco = preco;
             Qtde_alunos = qtde_alunos;
@@ -38,27 +39,78 @@ namespace Estudio
 
         }
 
-        /*métodos
+        //métodos
         public bool cadastrarModalidade()
         {
-            
+            bool cad = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand inserir = new MySqlCommand("insert into Estudio_Modalidade (idEstudo_Moidalidade, descricaoModalidade, precoModalidade, qtdeAlunos, qtdeAulas) values ('" + Descricao + "','" + Preco + "','" + Qtde_alunos + "','" + Qtde_aulas + "')", DAO_Conexao.con);
+                inserir.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+
+            return cad; 
         }
         
-        public MySqlDataReader consultarModalide()
+        /*public MySqlDataReader consultarModalidade()
         {
+            bool existe = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consultar = new MySqlCommand("SELECT * FROM Estudio_Modalidade" + "WHERE descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
+                MySqlDataReader result = consultar.ExecuteReader();
+                if (result.Read())
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
 
-        }
+            return existe;//??
+        }*/
 
-        public MySqlDataReader consultarTodasModalidades()
+        //public MySqlDataReader consultarTodasModalidades()
+        
 
-        public bool atualizarModalide()
-        {
-
-        }
+        //public bool atualizarModalidade()
 
         public bool excluirModalide()
         {
-
-        }*/
+            bool exc = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand excluir = new MySqlCommand("update Estudio_Modalidade set ativa" + "= 1 where descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
+                excluir.ExecuteNonQuery();
+                exc = true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return exc;
+        }
     }
 }
