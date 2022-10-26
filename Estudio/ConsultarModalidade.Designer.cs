@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpConsultMod = new System.Windows.Forms.GroupBox();
+            this.btnSalvarMod = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.txtQtdeAulasConsult = new System.Windows.Forms.TextBox();
             this.txtQtdeAlunosConsult = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.lblQtdeAlunosConsult = new System.Windows.Forms.Label();
             this.lblPrecoConsult = new System.Windows.Forms.Label();
             this.lblDescConsult = new System.Windows.Forms.Label();
-            this.btnSalvarMod = new System.Windows.Forms.Button();
             this.grpConsultMod.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,12 +61,23 @@
             this.grpConsultMod.TabStop = false;
             this.grpConsultMod.Text = "Modalidades";
             // 
+            // btnSalvarMod
+            // 
+            this.btnSalvarMod.Location = new System.Drawing.Point(161, 266);
+            this.btnSalvarMod.Name = "btnSalvarMod";
+            this.btnSalvarMod.Size = new System.Drawing.Size(93, 32);
+            this.btnSalvarMod.TabIndex = 6;
+            this.btnSalvarMod.Text = "Salvar";
+            this.btnSalvarMod.UseVisualStyleBackColor = true;
+            this.btnSalvarMod.Visible = false;
+            this.btnSalvarMod.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // btnAtualizar
             // 
             this.btnAtualizar.Location = new System.Drawing.Point(53, 266);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(93, 32);
-            this.btnAtualizar.TabIndex = 6;
+            this.btnAtualizar.TabIndex = 5;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -76,21 +87,21 @@
             this.txtQtdeAulasConsult.Location = new System.Drawing.Point(161, 216);
             this.txtQtdeAulasConsult.Name = "txtQtdeAulasConsult";
             this.txtQtdeAulasConsult.Size = new System.Drawing.Size(100, 22);
-            this.txtQtdeAulasConsult.TabIndex = 5;
+            this.txtQtdeAulasConsult.TabIndex = 4;
             // 
             // txtQtdeAlunosConsult
             // 
             this.txtQtdeAlunosConsult.Location = new System.Drawing.Point(161, 156);
             this.txtQtdeAlunosConsult.Name = "txtQtdeAlunosConsult";
             this.txtQtdeAlunosConsult.Size = new System.Drawing.Size(100, 22);
-            this.txtQtdeAlunosConsult.TabIndex = 5;
+            this.txtQtdeAlunosConsult.TabIndex = 3;
             // 
             // txtPrecoConsult
             // 
             this.txtPrecoConsult.Location = new System.Drawing.Point(161, 100);
             this.txtPrecoConsult.Name = "txtPrecoConsult";
             this.txtPrecoConsult.Size = new System.Drawing.Size(100, 22);
-            this.txtPrecoConsult.TabIndex = 5;
+            this.txtPrecoConsult.TabIndex = 2;
             // 
             // cmbDescConsult
             // 
@@ -98,7 +109,7 @@
             this.cmbDescConsult.Location = new System.Drawing.Point(161, 45);
             this.cmbDescConsult.Name = "cmbDescConsult";
             this.cmbDescConsult.Size = new System.Drawing.Size(271, 24);
-            this.cmbDescConsult.TabIndex = 4;
+            this.cmbDescConsult.TabIndex = 1;
             this.cmbDescConsult.SelectedIndexChanged += new System.EventHandler(this.cmbDescConsult_SelectedIndexChanged);
             // 
             // lblQtdeAulasConsult
@@ -136,17 +147,6 @@
             this.lblDescConsult.Size = new System.Drawing.Size(72, 16);
             this.lblDescConsult.TabIndex = 0;
             this.lblDescConsult.Text = "Descrição:";
-            // 
-            // btnSalvarMod
-            // 
-            this.btnSalvarMod.Location = new System.Drawing.Point(161, 266);
-            this.btnSalvarMod.Name = "btnSalvarMod";
-            this.btnSalvarMod.Size = new System.Drawing.Size(93, 32);
-            this.btnSalvarMod.TabIndex = 6;
-            this.btnSalvarMod.Text = "Salvar";
-            this.btnSalvarMod.UseVisualStyleBackColor = true;
-            this.btnSalvarMod.Visible = false;
-            this.btnSalvarMod.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // ConsultarModalidade
             // 

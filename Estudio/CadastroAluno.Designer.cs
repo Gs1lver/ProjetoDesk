@@ -98,7 +98,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(398, 338);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(134, 35);
-            this.btnCadastrar.TabIndex = 19;
+            this.btnCadastrar.TabIndex = 13;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -108,28 +108,28 @@
             this.txtNumero.Location = new System.Drawing.Point(457, 138);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(65, 22);
-            this.txtNumero.TabIndex = 18;
+            this.txtNumero.TabIndex = 4;
             // 
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(457, 191);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(73, 22);
-            this.txtComplemento.TabIndex = 17;
+            this.txtComplemento.TabIndex = 6;
             // 
             // txtEstado
             // 
             this.txtEstado.Location = new System.Drawing.Point(457, 238);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(73, 22);
-            this.txtEstado.TabIndex = 16;
+            this.txtEstado.TabIndex = 9;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(326, 295);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 22);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 11;
             // 
             // mtxCep
             // 
@@ -137,7 +137,7 @@
             this.mtxCep.Mask = "99.999-999";
             this.mtxCep.Name = "mtxCep";
             this.mtxCep.Size = new System.Drawing.Size(112, 22);
-            this.mtxCep.TabIndex = 14;
+            this.mtxCep.TabIndex = 7;
             // 
             // mtxTelefone
             // 
@@ -145,7 +145,7 @@
             this.mtxTelefone.Mask = "(99)99999-9999";
             this.mtxTelefone.Name = "mtxTelefone";
             this.mtxTelefone.Size = new System.Drawing.Size(171, 22);
-            this.mtxTelefone.TabIndex = 14;
+            this.mtxTelefone.TabIndex = 10;
             // 
             // mtxCpf
             // 
@@ -153,7 +153,7 @@
             this.mtxCpf.Mask = "999.999.999-99";
             this.mtxCpf.Name = "mtxCpf";
             this.mtxCpf.Size = new System.Drawing.Size(141, 22);
-            this.mtxCpf.TabIndex = 13;
+            this.mtxCpf.TabIndex = 1;
             this.mtxCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.mtxCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxCpf_KeyPress);
             // 
@@ -162,35 +162,35 @@
             this.txtCidade.Location = new System.Drawing.Point(263, 238);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(126, 22);
-            this.txtCidade.TabIndex = 12;
+            this.txtCidade.TabIndex = 8;
             // 
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(89, 191);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(251, 22);
-            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TabIndex = 5;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(89, 188);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(251, 22);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 5;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(89, 135);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(322, 22);
-            this.txtEndereco.TabIndex = 11;
+            this.txtEndereco.TabIndex = 3;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(88, 89);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(251, 22);
-            this.txtNome.TabIndex = 11;
+            this.txtNome.TabIndex = 2;
             // 
             // label11
             // 
@@ -296,7 +296,7 @@
             this.btnFoto.Location = new System.Drawing.Point(637, 350);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(163, 35);
-            this.btnFoto.TabIndex = 1;
+            this.btnFoto.TabIndex = 12;
             this.btnFoto.Text = "Escolher Foto";
             this.btnFoto.UseVisualStyleBackColor = true;
             // 
