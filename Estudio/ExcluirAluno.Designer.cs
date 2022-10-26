@@ -39,6 +39,7 @@
             this.mtxCpfExcluir.Name = "mtxCpfExcluir";
             this.mtxCpfExcluir.Size = new System.Drawing.Size(108, 22);
             this.mtxCpfExcluir.TabIndex = 0;
+            this.mtxCpfExcluir.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxCpfExcluir_MaskInputRejected);
             this.mtxCpfExcluir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxCpfExcluir_KeyPress);
             // 
             // lblExcluiCpf

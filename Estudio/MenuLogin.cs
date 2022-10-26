@@ -27,18 +27,18 @@ namespace Estudio
             int tipo = DAO_Conexao.login(txtLogin.Text, txtSenha.Text);
             if (tipo == 0)
             
-                MessageBox.Show("Usuario/Senha inválidos");
+                MessageBox.Show("Usuario/Senha inválidos", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtLogin.Text = "";
                 txtSenha.Text = "";
             if (tipo == 1)
             {
-                MessageBox.Show("Usuário ADM");
+                MessageBox.Show("Usuário ADM", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 grpValidacao.Visible = false;
                 arquivoMenuStrip.Enabled = true;
             }
             if (tipo == 2)
             {
-                MessageBox.Show("Usuário Restrito");
+                MessageBox.Show("Usuário Restrito", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 grpValidacao.Visible = false;
                 cadastroAlunoToolStripMenuItem.Enabled = true;
                 cadastroLoginToolStripMenuItem.Enabled = false;

@@ -60,6 +60,7 @@
             this.grpConsultMod.TabIndex = 0;
             this.grpConsultMod.TabStop = false;
             this.grpConsultMod.Text = "Modalidades";
+            this.grpConsultMod.Enter += new System.EventHandler(this.grpConsultMod_Enter);
             // 
             // btnSalvarMod
             // 

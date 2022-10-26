@@ -37,9 +37,9 @@ namespace Estudio
             //byte[] foto = ConverterFotoParaByteArray();
             Aluno aluno = new Aluno(mtxCpf.Text, txtNome.Text, txtEndereco.Text, txtNumero.Text, txtBairro.Text, txtComplemento.Text, mtxCep.Text, txtCidade.Text, txtEstado.Text, mtxTelefone.Text, txtEmail.Text); //falta o photo mas né
             if (aluno.cadastrarAluno())
-                MessageBox.Show("Cadastro realizado com sucesso");
+                MessageBox.Show("Cadastro realizado com sucesso!","Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("Erro no cadastro");
+                MessageBox.Show("Erro no cadastro. Por favor, tente novamente.","Alerta do Sistema",MessageBoxButtons.OK, MessageBoxIcon.Error);
             limparCampos();
         }
 
@@ -50,7 +50,7 @@ namespace Estudio
             {
                 if (aluno.consultarAluno())
                 {
-                    MessageBox.Show("Aluno já cadastrado!");
+                    MessageBox.Show("Aluno já cadastrado!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {

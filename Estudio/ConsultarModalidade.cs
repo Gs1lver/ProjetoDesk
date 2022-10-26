@@ -74,9 +74,9 @@ namespace Estudio
         {
             Modalidade mod = new Modalidade(cmbDescConsult.Text, float.Parse(txtPrecoConsult.Text), int.Parse(txtQtdeAlunosConsult.Text), int.Parse(txtQtdeAulasConsult.Text));
             if (mod.atualizarModalidade())
-                MessageBox.Show("Cadastro realizado com sucesso");
+                MessageBox.Show("Cadastro realizado com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("Erro no cadastro.");
+                MessageBox.Show("Erro no cadastro.", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             limparCampos();
             txtPrecoConsult.Enabled = false;
             txtQtdeAlunosConsult.Enabled = false;
@@ -85,6 +85,11 @@ namespace Estudio
             btnSalvarMod.Enabled = false;
             btnAtualizar.Enabled = true;
 
+
+        }
+
+        private void grpConsultMod_Enter(object sender, EventArgs e)
+        {
 
         }
     }

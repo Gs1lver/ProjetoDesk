@@ -26,7 +26,7 @@ namespace Estudio
             {
                 if (mod.excluirModalidade())
                 {
-                    MessageBox.Show("Modalidade excluída com sucesso!");
+                    MessageBox.Show("Modalidade excluída com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     cmbExcluiDescModDisplay();
                 }
             }

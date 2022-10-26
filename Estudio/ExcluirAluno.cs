@@ -26,11 +26,15 @@ namespace Estudio
                 {
                     if (aluno.excluirAluno())
                     {
-                        MessageBox.Show("Aluno excluído com sucesso!");
+                        MessageBox.Show("Aluno excluído com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
             }
         }
 
+        private void mtxCpfExcluir_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
