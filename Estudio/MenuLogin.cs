@@ -57,6 +57,7 @@ namespace Estudio
             CadastroUsuario cadastroLog = new CadastroUsuario();
             cadastroLog.MdiParent = this;
             cadastroLog.Show();
+
         }
 
         private void exclusãoAlunoToolStripMenuItem_Click(object sender, EventArgs e)

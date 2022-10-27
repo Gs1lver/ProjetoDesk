@@ -48,9 +48,9 @@
             this.grpDados.Controls.Add(this.label3);
             this.grpDados.Controls.Add(this.label2);
             this.grpDados.Controls.Add(this.label1);
-            this.grpDados.Location = new System.Drawing.Point(21, 19);
+            this.grpDados.Location = new System.Drawing.Point(12, 12);
             this.grpDados.Name = "grpDados";
-            this.grpDados.Size = new System.Drawing.Size(537, 224);
+            this.grpDados.Size = new System.Drawing.Size(558, 224);
             this.grpDados.TabIndex = 0;
             this.grpDados.TabStop = false;
             this.grpDados.Text = "Dados";
@@ -122,8 +122,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 263);
+            this.ClientSize = new System.Drawing.Size(582, 253);
             this.Controls.Add(this.grpDados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroUsuario";
