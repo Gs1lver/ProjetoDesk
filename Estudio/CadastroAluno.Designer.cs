@@ -317,9 +317,11 @@
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.grpDados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CadastroAluno";
             this.Load += new System.EventHandler(this.CadastroAluno_Load);
             this.grpDados.ResumeLayout(false);

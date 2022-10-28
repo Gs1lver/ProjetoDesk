@@ -80,9 +80,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 215);
             this.Controls.Add(this.grpExcluirMod);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExcluirModalidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Excluir Modalidade";
             this.Load += new System.EventHandler(this.ExcluirModalidade_Load);
             this.grpExcluirMod.ResumeLayout(false);

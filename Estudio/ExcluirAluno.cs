@@ -31,10 +31,20 @@ namespace Estudio
                 }
             }
         }
-
-        private void mtxCpfExcluir_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void btnExcluirAluno_Click(object sender, EventArgs e)
         {
-
+            
+            Aluno aluno = new Aluno(mtxCpfExcluir.Text);
+            if (aluno.consultarAluno())
+            {
+                if (aluno.excluirAluno())
+                {
+                    MessageBox.Show("Aluno excluído com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                    MessageBox.Show("Erro na exclusão", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            mtxCpfExcluir.Clear();
         }
     }
 }

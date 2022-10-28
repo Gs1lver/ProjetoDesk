@@ -155,9 +155,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 352);
             this.Controls.Add(this.grpConsultMod);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultarModalidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consultar Modalidade";
             this.Load += new System.EventHandler(this.ConsultarModalidade_Load);
             this.grpConsultMod.ResumeLayout(false);

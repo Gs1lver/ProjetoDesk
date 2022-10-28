@@ -57,7 +57,7 @@ namespace Estudio
             this.arquivoMenuStrip});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(619, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(898, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -144,11 +144,11 @@ namespace Estudio
             this.grpValidacao.Controls.Add(this.txtLogin);
             this.grpValidacao.Controls.Add(this.label2);
             this.grpValidacao.Controls.Add(this.label1);
-            this.grpValidacao.Location = new System.Drawing.Point(89, 107);
+            this.grpValidacao.Location = new System.Drawing.Point(237, 153);
             this.grpValidacao.Margin = new System.Windows.Forms.Padding(4);
             this.grpValidacao.Name = "grpValidacao";
             this.grpValidacao.Padding = new System.Windows.Forms.Padding(4);
-            this.grpValidacao.Size = new System.Drawing.Size(436, 222);
+            this.grpValidacao.Size = new System.Drawing.Size(405, 218);
             this.grpValidacao.TabIndex = 3;
             this.grpValidacao.TabStop = false;
             this.grpValidacao.Text = "Validação";
@@ -205,14 +205,15 @@ namespace Estudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 415);
+            this.ClientSize = new System.Drawing.Size(898, 516);
             this.Controls.Add(this.grpValidacao);
             this.Controls.Add(this.menuStrip2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estúdio";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

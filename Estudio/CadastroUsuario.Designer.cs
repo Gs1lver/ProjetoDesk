@@ -128,7 +128,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroUsuario";
-            this.Text = "CadastroUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Cadastro Usuário";
             this.grpDados.ResumeLayout(false);
             this.grpDados.PerformLayout();
             this.ResumeLayout(false);

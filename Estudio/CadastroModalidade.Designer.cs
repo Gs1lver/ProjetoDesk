@@ -149,9 +149,11 @@
             this.ClientSize = new System.Drawing.Size(648, 346);
             this.Controls.Add(this.grpCadastrarMod);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroModalidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastrar Modalidade";
             this.grpCadastrarMod.ResumeLayout(false);
             this.grpCadastrarMod.PerformLayout();

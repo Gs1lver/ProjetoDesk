@@ -35,6 +35,7 @@ namespace Estudio
                 MessageBox.Show("Usuário ADM", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 grpValidacao.Visible = false;
                 arquivoMenuStrip.Enabled = true;
+                
             }
             if (tipo == 2)
             {
@@ -57,7 +58,7 @@ namespace Estudio
             CadastroUsuario cadastroLog = new CadastroUsuario();
             cadastroLog.MdiParent = this;
             cadastroLog.Show();
-
+           
         }
 
         private void exclusãoAlunoToolStripMenuItem_Click(object sender, EventArgs e)

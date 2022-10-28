@@ -102,8 +102,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand exclui = new MySqlCommand("update Estudio_Aluno set ativo " +
-                    "= 1 where CPFAluno = '" + CPF + "'", DAO_Conexao.con);
+                MySqlCommand exclui = new MySqlCommand("update Estudio_Aluno set ativo " + "= 1 where CPFAluno = '" + CPF + "'", DAO_Conexao.con);
                 //Console.Writeline("update Estudio_Aluno set ativo = 1 where CPFAluno = '" + CPF +
                 exclui.ExecuteNonQuery();
                 exc = true;
