@@ -39,11 +39,13 @@
             this.lblQtdeAlunosConsult = new System.Windows.Forms.Label();
             this.lblPrecoConsult = new System.Windows.Forms.Label();
             this.lblDescConsult = new System.Windows.Forms.Label();
+            this.btnConsultTodos = new System.Windows.Forms.Button();
             this.grpConsultMod.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpConsultMod
             // 
+            this.grpConsultMod.Controls.Add(this.btnConsultTodos);
             this.grpConsultMod.Controls.Add(this.btnSalvarMod);
             this.grpConsultMod.Controls.Add(this.btnAtualizar);
             this.grpConsultMod.Controls.Add(this.txtQtdeAulasConsult);
@@ -149,6 +151,16 @@
             this.lblDescConsult.TabIndex = 0;
             this.lblDescConsult.Text = "Descrição:";
             // 
+            // btnConsultTodos
+            // 
+            this.btnConsultTodos.Location = new System.Drawing.Point(536, 255);
+            this.btnConsultTodos.Name = "btnConsultTodos";
+            this.btnConsultTodos.Size = new System.Drawing.Size(118, 43);
+            this.btnConsultTodos.TabIndex = 7;
+            this.btnConsultTodos.Text = "Consultar Modalidades";
+            this.btnConsultTodos.UseVisualStyleBackColor = true;
+            this.btnConsultTodos.Click += new System.EventHandler(this.btnConsultTodos_Click);
+            // 
             // ConsultarModalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Label lblDescConsult;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnSalvarMod;
+        private System.Windows.Forms.Button btnConsultTodos;
     }
 }

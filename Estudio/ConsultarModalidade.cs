@@ -92,5 +92,12 @@ namespace Estudio
         {
 
         }
+
+        private void btnConsultTodos_Click(object sender, EventArgs e)
+        {
+            TodasModalidades todasMod = new TodasModalidades();
+            //todasMod.MdiParent = this;
+            todasMod.Show();
+        }
     }
 }
