@@ -32,9 +32,9 @@ namespace Estudio
             else if (cboTipo.SelectedIndex == 1)
                 tipo = 2;
             if (DAO_Conexao.CadLogin(txtUsuario.Text, txtSenha.Text, tipo))
-                MessageBox.Show("Cadastro realizado com sucesso");
+                MessageBox.Show("Cadastro realizado com sucesso", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
-                MessageBox.Show("Erro de cadastro");
+                MessageBox.Show("Erro de cadastro", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             limparCampos();
         }
     }

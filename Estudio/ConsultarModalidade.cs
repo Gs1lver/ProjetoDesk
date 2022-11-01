@@ -62,6 +62,11 @@ namespace Estudio
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            if(cmbDescConsult.SelectedIndex == -1)
+            {
+                MessageBox.Show("Modalidade não selecionada!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             cmbDescConsult.Enabled = false;
             txtPrecoConsult.Enabled = true;
             txtQtdeAlunosConsult.Enabled = true;
@@ -72,31 +77,32 @@ namespace Estudio
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Modalidade mod = new Modalidade(cmbDescConsult.Text, float.Parse(txtPrecoConsult.Text), int.Parse(txtQtdeAlunosConsult.Text), int.Parse(txtQtdeAulasConsult.Text));
-            if (mod.atualizarModalidade())
-                MessageBox.Show("Cadastro realizado com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-                MessageBox.Show("Erro no cadastro.", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            limparCampos();
-            txtPrecoConsult.Enabled = false;
-            txtQtdeAlunosConsult.Enabled = false;
-            txtQtdeAulasConsult.Enabled = false;
-            cmbDescConsult.Enabled = true;
-            btnSalvarMod.Enabled = false;
-            btnAtualizar.Enabled = true;
-
-
-        }
-
-        private void grpConsultMod_Enter(object sender, EventArgs e)
-        {
-
+            try
+            {
+                Modalidade mod = new Modalidade(cmbDescConsult.Text, float.Parse(txtPrecoConsult.Text), int.Parse(txtQtdeAlunosConsult.Text), int.Parse(txtQtdeAulasConsult.Text));
+                if (mod.atualizarModalidade())
+                    MessageBox.Show("Atualizado com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Erro no cadastro.", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                limparCampos();
+                txtPrecoConsult.Enabled = false;
+                txtQtdeAlunosConsult.Enabled = false;
+                txtQtdeAulasConsult.Enabled = false;
+                cmbDescConsult.Enabled = true;
+                btnSalvarMod.Enabled = false;
+                btnAtualizar.Enabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Não há como salvar algo nulo", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnConsultTodos_Click(object sender, EventArgs e)
         {
             TodasModalidades todasMod = new TodasModalidades();
-            //todasMod.MdiParent = this;
+            todasMod.MdiParent = this.MdiParent;
             todasMod.Show();
         }
     }

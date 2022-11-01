@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Estudio
 {
     public partial class MenuLogin : Form
@@ -46,47 +47,52 @@ namespace Estudio
             }
         }
 
+        private void abrirForm<T>() where T : Form
+        {
+            T cadastro;
+            if (this.MdiChildren.OfType<T>().Count() == 0)
+            {
+                cadastro = (T)typeof(T).GetConstructor(Type.EmptyTypes).Invoke(null);
+                cadastro.MdiParent = this;
+            }
+            else
+            {
+                cadastro = this.MdiChildren.OfType<T>().First();
+
+            }
+            cadastro.Show();
+            cadastro.Focus();
+        }
         private void cadastroAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroAluno cadastroAl = new CadastroAluno();
-            cadastroAl.MdiParent = this;
-            cadastroAl.Show();
+            abrirForm<CadastroAluno>();
         }
 
         private void cadastroLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroUsuario cadastroLog = new CadastroUsuario();
-            cadastroLog.MdiParent = this;
-            cadastroLog.Show();
+            abrirForm<CadastroUsuario>();
            
         }
 
         private void exclusãoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcluirAluno excluirAl = new ExcluirAluno();
-            excluirAl.MdiParent = this;
-            excluirAl.Show();
+            abrirForm<ExcluirAluno>();
         }
 
         private void cadastroModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroModalidade cadastroMod = new CadastroModalidade();
-            cadastroMod.MdiParent = this;
-            cadastroMod.Show();
+            abrirForm<CadastroModalidade>();
         }
 
         private void exclusãoModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExcluirModalidade excluirMod = new ExcluirModalidade();
-            excluirMod.MdiParent = this;
-            excluirMod.Show();
+            abrirForm<ExcluirModalidade>();
         }
 
         private void consultaModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarModalidade consultarMod = new ConsultarModalidade();
-            consultarMod.MdiParent = this;
-            consultarMod.Show();
+            abrirForm<ConsultarModalidade>();
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

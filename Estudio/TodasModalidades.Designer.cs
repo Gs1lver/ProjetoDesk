@@ -34,7 +34,6 @@
             this.listPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listAlunos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listAulas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLoadData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMod)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,12 +48,12 @@
             this.listPreco,
             this.listAlunos,
             this.listAulas});
-            this.dgvMod.Location = new System.Drawing.Point(54, 89);
+            this.dgvMod.Location = new System.Drawing.Point(45, 35);
             this.dgvMod.Name = "dgvMod";
             this.dgvMod.ReadOnly = true;
             this.dgvMod.RowHeadersWidth = 51;
             this.dgvMod.RowTemplate.Height = 24;
-            this.dgvMod.Size = new System.Drawing.Size(680, 334);
+            this.dgvMod.Size = new System.Drawing.Size(697, 359);
             this.dgvMod.TabIndex = 0;
             // 
             // listID
@@ -97,22 +96,11 @@
             this.listAulas.ReadOnly = true;
             this.listAulas.Width = 125;
             // 
-            // btnLoadData
-            // 
-            this.btnLoadData.Location = new System.Drawing.Point(54, 26);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(144, 31);
-            this.btnLoadData.TabIndex = 1;
-            this.btnLoadData.Text = "Carregar Dados";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
-            // 
             // TodasModalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLoadData);
+            this.ClientSize = new System.Drawing.Size(786, 426);
             this.Controls.Add(this.dgvMod);
             this.Name = "TodasModalidades";
             this.Text = "TodasModalidades";
@@ -129,6 +117,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn listPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn listAlunos;
         private System.Windows.Forms.DataGridViewTextBoxColumn listAulas;
-        private System.Windows.Forms.Button btnLoadData;
     }
 }

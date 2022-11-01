@@ -20,7 +20,12 @@ namespace Estudio
 
         private void btnExcluirMod_Click(object sender, EventArgs e)
         {
-            cmbDescExcluiMod.Items.Clear();
+            if(cmbDescExcluiMod.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione uma modalidade!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             Modalidade mod = new Modalidade(cmbDescExcluiMod.Text);
             if (mod.consultarModalidade()) 
             {
@@ -38,6 +43,8 @@ namespace Estudio
             DAO_Conexao.con.Open();
             MySqlCommand comando = new MySqlCommand("SELECT descricaoModalidade, idEstudio_Modalidade from Estudio_Modalidade WHERE ativa = 0", DAO_Conexao.con);
             MySqlDataReader dataR = comando.ExecuteReader();
+            cmbDescExcluiMod.Items.Clear();
+
             while (dataR.Read())
             {
                 cmbDescExcluiMod.Items.Add(dataR["descricaoModalidade"].ToString());

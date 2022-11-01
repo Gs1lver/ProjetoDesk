@@ -16,18 +16,27 @@ namespace Estudio
     public partial class TodasModalidades : Form
     {
 
-        private static ArrayList ListID = new ArrayList();
-        private static ArrayList ListDescr = new ArrayList();
-        private static ArrayList ListPreco = new ArrayList();
-        private static ArrayList ListAlunos = new ArrayList();
-        private static ArrayList ListAulas = new ArrayList();
+        private static ArrayList ListID;
+        private static ArrayList ListDescr;
+        private static ArrayList ListPreco;
+        private static ArrayList ListAlunos;
+        private static ArrayList ListAulas;
+
         public TodasModalidades()
         {
             InitializeComponent();
+            LoadModalidades(null, null);
+
         }
 
         public void consultarTodasModalidades()
         {
+            ListID = new ArrayList();
+            ListDescr = new ArrayList();
+            ListPreco = new ArrayList();
+            ListAlunos = new ArrayList();
+            ListAulas = new ArrayList();
+
             try
             {
                 DAO_Conexao.con.Open();
@@ -61,7 +70,7 @@ namespace Estudio
             }
 
         }
-        private void btnLoadData_Click(object sender, EventArgs e)
+        private void LoadModalidades(object sender, EventArgs e)
         {
             consultarTodasModalidades();
             if(ListID.Count > 0)
@@ -71,12 +80,12 @@ namespace Estudio
             else
             {
                 MessageBox.Show("Dados não encontrados");
-            }
-            btnLoadData.Enabled = false;
+            }            
         }
 
         private void carregarDataGrid()
         {
+
             dgvMod.Rows.Clear();
             for (int i = 0; i < ListID.Count; i++)
             {
@@ -91,6 +100,7 @@ namespace Estudio
                 dgvMod.Rows.Add(novaColuna);
 
             }
+            
         }
     }
 }

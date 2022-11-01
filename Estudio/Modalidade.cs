@@ -4,6 +4,7 @@ using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -54,7 +55,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand inserir = new MySqlCommand("insert into Estudio_Modalidade (descricaoModalidade, precoModalidade, qtdeAlunos, qtdeAulas) values ('" + Descricao + "','" + Preco + "','" + Qtde_alunos + "','" + Qtde_aulas + "')", DAO_Conexao.con);
+                MySqlCommand inserir = new MySqlCommand("insert into Estudio_Modalidade (descricaoModalidade, precoModalidade, qtdeAlunos, qtdeAulas) values ('" + Descricao + "','" + Preco.ToString(new CultureInfo("en-US")) + "','" + Qtde_alunos + "','" + Qtde_aulas + "')", DAO_Conexao.con);
                 inserir.ExecuteNonQuery();
                 cad = true;
             }

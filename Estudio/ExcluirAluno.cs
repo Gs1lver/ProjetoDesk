@@ -33,7 +33,12 @@ namespace Estudio
         }
         private void btnExcluirAluno_Click(object sender, EventArgs e)
         {
-            
+            if (!mtxCpfExcluir.MaskFull)
+            {
+                MessageBox.Show("Preencha o CPF!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mtxCpfExcluir.Focus();
+                return;
+            }
             Aluno aluno = new Aluno(mtxCpfExcluir.Text);
             if (aluno.consultarAluno())
             {
@@ -42,7 +47,7 @@ namespace Estudio
                     MessageBox.Show("Aluno excluído com sucesso!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
-                    MessageBox.Show("Erro na exclusão", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Erro na exclusão", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             mtxCpfExcluir.Clear();
         }

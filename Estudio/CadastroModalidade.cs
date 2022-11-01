@@ -29,12 +29,20 @@ namespace Estudio
 
         private void btnCadastrarMod_Click(object sender, EventArgs e)
         {
-            Modalidade mod = new Modalidade(cmbDescModalidade.Text, float.Parse(txtPreco.Text), int.Parse(txtQtdeAlunos.Text), int.Parse(txtQtdeAulas.Text));
-            if (mod.cadastrarModalidade())
-                MessageBox.Show("Cadastro realizado com sucesso");
-            else
-                MessageBox.Show("Erro no cadastro.");
-            limparCampos();
+            try
+            {
+                Modalidade mod = new Modalidade(cmbDescModalidade.Text, float.Parse(txtPreco.Text.Replace(".", ",")), int.Parse(txtQtdeAlunos.Text), int.Parse(txtQtdeAulas.Text));
+                if (mod.cadastrarModalidade())
+                    
+                    MessageBox.Show("Cadastro realizado com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Erro no cadastro." , "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                limparCampos();
+            }
+            catch
+            {
+                MessageBox.Show("Preencha todos os campos!","Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         
