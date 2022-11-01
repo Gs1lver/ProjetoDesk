@@ -34,6 +34,8 @@ namespace Estudio
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            try
+            { 
             //byte[] foto = ConverterFotoParaByteArray();
             Aluno aluno = new Aluno(mtxCpf.Text, txtNome.Text, txtEndereco.Text, txtNumero.Text, txtBairro.Text, txtComplemento.Text, mtxCep.Text, txtCidade.Text, txtEstado.Text, mtxTelefone.Text, txtEmail.Text); //falta o photo mas né
             if (aluno.cadastrarAluno())
@@ -41,6 +43,11 @@ namespace Estudio
             else
                 MessageBox.Show("Erro no cadastro. Por favor, tente novamente.","Alerta do Sistema",MessageBoxButtons.OK, MessageBoxIcon.Error);
             limparCampos();
+            }
+            catch
+            {
+                MessageBox.Show("Preencha todos os campos!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void mtxCpf_KeyPress(object sender, KeyPressEventArgs e)

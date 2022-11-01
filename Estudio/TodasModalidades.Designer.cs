@@ -48,12 +48,12 @@
             this.listPreco,
             this.listAlunos,
             this.listAulas});
-            this.dgvMod.Location = new System.Drawing.Point(45, 35);
+            this.dgvMod.Location = new System.Drawing.Point(36, 35);
             this.dgvMod.Name = "dgvMod";
             this.dgvMod.ReadOnly = true;
             this.dgvMod.RowHeadersWidth = 51;
             this.dgvMod.RowTemplate.Height = 24;
-            this.dgvMod.Size = new System.Drawing.Size(697, 359);
+            this.dgvMod.Size = new System.Drawing.Size(679, 359);
             this.dgvMod.TabIndex = 0;
             // 
             // listID
@@ -100,10 +100,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 426);
+            this.ClientSize = new System.Drawing.Size(758, 426);
             this.Controls.Add(this.dgvMod);
             this.Name = "TodasModalidades";
-            this.Text = "TodasModalidades";
+            this.Text = "Modalidades";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMod)).EndInit();
             this.ResumeLayout(false);
 
