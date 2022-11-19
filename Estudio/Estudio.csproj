@@ -62,6 +62,12 @@
     <Compile Include="CadastroModalidade.Designer.cs">
       <DependentUpon>CadastroModalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroTurma.Designer.cs">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="ExcluirModalidade.Designer.cs">
       <DependentUpon>ExcluirModalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirTurma.Designer.cs">
+      <DependentUpon>ExcluirTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +114,15 @@
     <Compile Include="TodasModalidades.Designer.cs">
       <DependentUpon>TodasModalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Turma.cs" />
     <EmbeddedResource Include="CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroModalidade.resx">
       <DependentUpon>CadastroModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroTurma.resx">
+      <DependentUpon>CadastroTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroUsuario.resx">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
@@ -119,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirModalidade.resx">
       <DependentUpon>ExcluirModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirTurma.resx">
+      <DependentUpon>ExcluirTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuLogin.resx">
       <DependentUpon>MenuLogin.cs</DependentUpon>

@@ -119,8 +119,6 @@ namespace Estudio
 
             return existe;
         }
-
-
         public bool excluirModalidade()
         {
             bool exc = false;
@@ -142,6 +140,9 @@ namespace Estudio
             return exc;
         }
 
-       
+       /*public bool atualizarTodasModalidades()
+        {
+
+        }*/
     }
 }
