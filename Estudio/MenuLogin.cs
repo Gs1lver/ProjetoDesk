@@ -99,5 +99,15 @@ namespace Estudio
         {
             System.Windows.Forms.Application.ExitThread();
         }
+
+        private void cadastrarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirForm<CadastroTurma>();
+        }
+
+        private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirForm<ExcluirTurma>();
+        }
     }
 }

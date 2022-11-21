@@ -163,6 +163,8 @@
             this.ClientSize = new System.Drawing.Size(550, 577);
             this.Controls.Add(this.grvTurma);
             this.Controls.Add(this.grpTurmaCad);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroTurma";
             this.Text = "Cadastrar Turma";
             this.grpTurmaCad.ResumeLayout(false);

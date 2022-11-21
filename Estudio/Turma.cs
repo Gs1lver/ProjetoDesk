@@ -39,19 +39,29 @@ namespace Estudio
 
         //Métodos
 
-        /*public bool cadastrarTurma()
+        /*
+        public bool cadastrarTurma()
         {
+            DAO_Conexao.con.Open();
+            MySqlCommand inserir = new MySqlCommand("insert into Estudio_Turma (professorTurma, diadasemanaTurma, horaTurma, ) values ('" + Professor + "','" + Dia_semana + "','" + Hora + "','")", DAO_Conexao.con); //KE
+            // 
+        }*/
 
-        }
+        
         public bool excluirTurma()
         {
-
+            DAO_Conexao.con.Open();
+            MySqlCommand excluir = new MySqlCommand()
+        
         }
+        /*
         public MySqlDataReader consultarTurma()
         {
 
         }
-        public MySqlDataReader consultarTurma01()
+        */
+
+        /*public MySqlDataReader consultarTurma01()
         {
 
         }*/

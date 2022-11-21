@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.grpTurmaExcluir = new System.Windows.Forms.GroupBox();
+            this.cmbHoraTurma = new System.Windows.Forms.ComboBox();
+            this.cmbDiaSemanaTurma = new System.Windows.Forms.ComboBox();
+            this.cmbModalidadeTurma = new System.Windows.Forms.ComboBox();
             this.btnExcluiTurma = new System.Windows.Forms.Button();
             this.lblHoraExcluiTurma = new System.Windows.Forms.Label();
             this.lblDiaSemanaExcluiTurma = new System.Windows.Forms.Label();
             this.lblModalidadeExcluiTurma = new System.Windows.Forms.Label();
-            this.cmbModalidadeTurma = new System.Windows.Forms.ComboBox();
-            this.cmbDiaSemanaTurma = new System.Windows.Forms.ComboBox();
-            this.cmbHoraTurma = new System.Windows.Forms.ComboBox();
             this.grpTurmaExcluir.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,30 @@
             this.grpTurmaExcluir.TabIndex = 0;
             this.grpTurmaExcluir.TabStop = false;
             this.grpTurmaExcluir.Text = "Turma";
+            // 
+            // cmbHoraTurma
+            // 
+            this.cmbHoraTurma.FormattingEnabled = true;
+            this.cmbHoraTurma.Location = new System.Drawing.Point(134, 212);
+            this.cmbHoraTurma.Name = "cmbHoraTurma";
+            this.cmbHoraTurma.Size = new System.Drawing.Size(390, 24);
+            this.cmbHoraTurma.TabIndex = 6;
+            // 
+            // cmbDiaSemanaTurma
+            // 
+            this.cmbDiaSemanaTurma.FormattingEnabled = true;
+            this.cmbDiaSemanaTurma.Location = new System.Drawing.Point(136, 128);
+            this.cmbDiaSemanaTurma.Name = "cmbDiaSemanaTurma";
+            this.cmbDiaSemanaTurma.Size = new System.Drawing.Size(388, 24);
+            this.cmbDiaSemanaTurma.TabIndex = 5;
+            // 
+            // cmbModalidadeTurma
+            // 
+            this.cmbModalidadeTurma.FormattingEnabled = true;
+            this.cmbModalidadeTurma.Location = new System.Drawing.Point(134, 55);
+            this.cmbModalidadeTurma.Name = "cmbModalidadeTurma";
+            this.cmbModalidadeTurma.Size = new System.Drawing.Size(390, 24);
+            this.cmbModalidadeTurma.TabIndex = 4;
             // 
             // btnExcluiTurma
             // 
@@ -91,36 +115,14 @@
             this.lblModalidadeExcluiTurma.TabIndex = 0;
             this.lblModalidadeExcluiTurma.Text = "Modalidade:";
             // 
-            // cmbModalidadeTurma
-            // 
-            this.cmbModalidadeTurma.FormattingEnabled = true;
-            this.cmbModalidadeTurma.Location = new System.Drawing.Point(134, 55);
-            this.cmbModalidadeTurma.Name = "cmbModalidadeTurma";
-            this.cmbModalidadeTurma.Size = new System.Drawing.Size(390, 24);
-            this.cmbModalidadeTurma.TabIndex = 4;
-            // 
-            // cmbDiaSemanaTurma
-            // 
-            this.cmbDiaSemanaTurma.FormattingEnabled = true;
-            this.cmbDiaSemanaTurma.Location = new System.Drawing.Point(136, 128);
-            this.cmbDiaSemanaTurma.Name = "cmbDiaSemanaTurma";
-            this.cmbDiaSemanaTurma.Size = new System.Drawing.Size(388, 24);
-            this.cmbDiaSemanaTurma.TabIndex = 5;
-            // 
-            // cmbHoraTurma
-            // 
-            this.cmbHoraTurma.FormattingEnabled = true;
-            this.cmbHoraTurma.Location = new System.Drawing.Point(134, 212);
-            this.cmbHoraTurma.Name = "cmbHoraTurma";
-            this.cmbHoraTurma.Size = new System.Drawing.Size(390, 24);
-            this.cmbHoraTurma.TabIndex = 6;
-            // 
             // ExcluirTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 399);
             this.Controls.Add(this.grpTurmaExcluir);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ExcluirTurma";
             this.Text = "Excluir Turma";
             this.grpTurmaExcluir.ResumeLayout(false);

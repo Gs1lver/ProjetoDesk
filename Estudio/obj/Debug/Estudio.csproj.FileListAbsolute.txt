@@ -38,3 +38,5 @@ C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.CadastroModalidade.resources
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.ConsultarModalidade.resources
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.ExcluirModalidade.resources
 C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.TodasModalidades.resources
+C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.CadastroTurma.resources
+C:\Códigos\ProjetoDesk\Estudio\obj\Debug\Estudio.ExcluirTurma.resources
