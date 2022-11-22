@@ -119,6 +119,14 @@ namespace Estudio
 
             return existe;
         }
+
+        internal MySqlDataReader consultarTodasModalidade()
+        {
+            DAO_Conexao.con.Open();
+            string sql = "SELECT * FROM Estudio_Modalidade";
+            MySqlCommand todos = new MySqlCommand(sql, DAO_Conexao.con);
+            return todos.ExecuteReader();
+        }
         public bool excluirModalidade()
         {
             bool exc = false;
@@ -140,9 +148,11 @@ namespace Estudio
             return exc;
         }
 
-       /*public bool atualizarTodasModalidades()
-        {
+        
 
-        }*/
+        /*public bool atualizarTodasModalidades()
+         {
+
+         }*/
     }
 }

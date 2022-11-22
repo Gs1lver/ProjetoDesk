@@ -100,6 +100,7 @@
             this.btnCadastrarTurma.TabIndex = 4;
             this.btnCadastrarTurma.Text = "Cadastrar";
             this.btnCadastrarTurma.UseVisualStyleBackColor = true;
+            this.btnCadastrarTurma.Click += new System.EventHandler(this.btnCadastrarTurma_Click);
             // 
             // lblHoraTurma
             // 

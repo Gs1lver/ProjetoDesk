@@ -18,12 +18,17 @@ namespace Estudio
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
 
-            /*Modalidade con_mod = new Modalidade();
-            MySqlDataReader r = con_mod.consultarModalidade();
+            Modalidade con_mod = new Modalidade();
+            MySqlDataReader r = con_mod.consultarTodasModalidade();
             while (r.Read())
-                grvModalidade.Rows.Add(r["descricaoModalidade"].ToString());
-            DAO_Conexao.con.Close();*/
+                grvTurma.Rows.Add(r["descricaoModalidade"].ToString());
+            DAO_Conexao.con.Close();
         }
 
+
+        private void btnCadastrarTurma_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
