@@ -78,6 +78,7 @@
             this.cmbModalidadeTurma.Name = "cmbModalidadeTurma";
             this.cmbModalidadeTurma.Size = new System.Drawing.Size(390, 24);
             this.cmbModalidadeTurma.TabIndex = 4;
+            this.cmbModalidadeTurma.SelectedIndexChanged += new System.EventHandler(this.cmbModalidadeTurma_SelectedIndexChanged);
             // 
             // btnExcluiTurma
             // 

@@ -17,13 +17,14 @@ namespace Estudio
         public CadastroTurma()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
 
             Modalidade con_mod = new Modalidade();
             MySqlDataReader r = con_mod.consultarTodasModalidade();
             while (r.Read())
-                dgvTurma.Rows.Add(r["descricaoModalidade"].ToString());
+                dgvTurma.Rows.Add(r["descricaoModalidade"].ToString(), r["idEstudio_Modalidade"].ToString());
             DAO_Conexao.con.Close();
+            limparCampos();
         }
 
         public void limparCampos()
@@ -36,9 +37,11 @@ namespace Estudio
 
         private void btnCadastrarTurma_Click(object sender, EventArgs e)
         {
+                var selectedrow = dgvTurma.SelectedRows[0];
+                var selectedvalue = selectedrow.Cells[1].Value.ToString();
             try
             {
-                Turma turma = new Turma(int.Parse(txtModTurma.Text), txtProfTurma.Text, txtDiaSemanaTurma.Text ,mtxHoraTurma.Text);
+                Turma turma = new Turma(int.Parse(dgvTurma.SelectedRows[0].Cells[1].Value.ToString()), txtProfTurma.Text, txtDiaSemanaTurma.Text ,mtxHoraTurma.Text);
                 if (turma.cadastrarTurma())
 
                     MessageBox.Show("Cadastro realizado com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -46,8 +49,9 @@ namespace Estudio
                     MessageBox.Show("Erro no cadastro.", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 limparCampos();
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("Preencha todos os campos!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpTurmaCad = new System.Windows.Forms.GroupBox();
+            this.btnAtualizarTurma = new System.Windows.Forms.Button();
             this.mtxHoraTurma = new System.Windows.Forms.MaskedTextBox();
             this.txtDiaSemanaTurma = new System.Windows.Forms.TextBox();
             this.txtProfTurma = new System.Windows.Forms.TextBox();
@@ -40,12 +41,14 @@
             this.lblModalidadeTurma = new System.Windows.Forms.Label();
             this.dgvTurma = new System.Windows.Forms.DataGridView();
             this.modalidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpTurmaCad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).BeginInit();
             this.SuspendLayout();
             // 
             // grpTurmaCad
             // 
+            this.grpTurmaCad.Controls.Add(this.btnAtualizarTurma);
             this.grpTurmaCad.Controls.Add(this.mtxHoraTurma);
             this.grpTurmaCad.Controls.Add(this.txtDiaSemanaTurma);
             this.grpTurmaCad.Controls.Add(this.txtProfTurma);
@@ -61,6 +64,15 @@
             this.grpTurmaCad.TabIndex = 0;
             this.grpTurmaCad.TabStop = false;
             this.grpTurmaCad.Text = "Turma";
+            // 
+            // btnAtualizarTurma
+            // 
+            this.btnAtualizarTurma.Location = new System.Drawing.Point(334, 189);
+            this.btnAtualizarTurma.Name = "btnAtualizarTurma";
+            this.btnAtualizarTurma.Size = new System.Drawing.Size(186, 31);
+            this.btnAtualizarTurma.TabIndex = 6;
+            this.btnAtualizarTurma.Text = "Atualizar";
+            this.btnAtualizarTurma.UseVisualStyleBackColor = true;
             // 
             // mtxHoraTurma
             // 
@@ -94,9 +106,9 @@
             // 
             // btnCadastrarTurma
             // 
-            this.btnCadastrarTurma.Location = new System.Drawing.Point(52, 189);
+            this.btnCadastrarTurma.Location = new System.Drawing.Point(18, 189);
             this.btnCadastrarTurma.Name = "btnCadastrarTurma";
-            this.btnCadastrarTurma.Size = new System.Drawing.Size(400, 31);
+            this.btnCadastrarTurma.Size = new System.Drawing.Size(186, 31);
             this.btnCadastrarTurma.TabIndex = 5;
             this.btnCadastrarTurma.Text = "Cadastrar";
             this.btnCadastrarTurma.UseVisualStyleBackColor = true;
@@ -140,14 +152,18 @@
             // 
             // dgvTurma
             // 
+            this.dgvTurma.AllowUserToAddRows = false;
+            this.dgvTurma.AllowUserToDeleteRows = false;
             this.dgvTurma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTurma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.modalidade});
-            this.dgvTurma.Location = new System.Drawing.Point(12, 268);
+            this.modalidade,
+            this.dataGridViewTextBoxColumn1});
+            this.dgvTurma.Location = new System.Drawing.Point(0, 280);
             this.dgvTurma.Name = "dgvTurma";
             this.dgvTurma.RowHeadersWidth = 51;
             this.dgvTurma.RowTemplate.Height = 24;
-            this.dgvTurma.Size = new System.Drawing.Size(526, 297);
+            this.dgvTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTurma.Size = new System.Drawing.Size(550, 297);
             this.dgvTurma.TabIndex = 1;
             this.dgvTurma.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTurma_CellContentClick);
             this.dgvTurma.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvTurma_RowEnter);
@@ -158,6 +174,14 @@
             this.modalidade.MinimumWidth = 6;
             this.modalidade.Name = "modalidade";
             this.modalidade.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // CadastroTurma
             // 
@@ -190,6 +214,8 @@
         private System.Windows.Forms.Label lblHoraTurma;
         private System.Windows.Forms.MaskedTextBox mtxHoraTurma;
         private System.Windows.Forms.DataGridView dgvTurma;
+        private System.Windows.Forms.Button btnAtualizarTurma;
         private System.Windows.Forms.DataGridViewTextBoxColumn modalidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

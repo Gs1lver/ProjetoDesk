@@ -36,8 +36,11 @@ namespace Estudio
             this.exclusãoAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.cadastroModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exclusãoModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exclusãoModalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cadastrarTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpValidacao = new System.Windows.Forms.GroupBox();
@@ -46,9 +49,6 @@ namespace Estudio
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cadastrarTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.excluirTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.grpValidacao.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,13 @@ namespace Estudio
             this.cadastroModalidadeToolStripMenuItem.Text = "Cadastro Modalidade";
             this.cadastroModalidadeToolStripMenuItem.Click += new System.EventHandler(this.cadastroModalidadeToolStripMenuItem_Click);
             // 
+            // consultaModalidadeToolStripMenuItem
+            // 
+            this.consultaModalidadeToolStripMenuItem.Name = "consultaModalidadeToolStripMenuItem";
+            this.consultaModalidadeToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.consultaModalidadeToolStripMenuItem.Text = "Consulta Modalidade";
+            this.consultaModalidadeToolStripMenuItem.Click += new System.EventHandler(this.consultaModalidadeToolStripMenuItem_Click);
+            // 
             // exclusãoModalidadeToolStripMenuItem
             // 
             this.exclusãoModalidadeToolStripMenuItem.Name = "exclusãoModalidadeToolStripMenuItem";
@@ -124,12 +131,24 @@ namespace Estudio
             this.exclusãoModalidadeToolStripMenuItem.Text = "Exclusão Modalidade";
             this.exclusãoModalidadeToolStripMenuItem.Click += new System.EventHandler(this.exclusãoModalidadeToolStripMenuItem_Click);
             // 
-            // consultaModalidadeToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.consultaModalidadeToolStripMenuItem.Name = "consultaModalidadeToolStripMenuItem";
-            this.consultaModalidadeToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.consultaModalidadeToolStripMenuItem.Text = "Consulta Modalidade";
-            this.consultaModalidadeToolStripMenuItem.Click += new System.EventHandler(this.consultaModalidadeToolStripMenuItem_Click);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(233, 6);
+            // 
+            // cadastrarTurmaToolStripMenuItem
+            // 
+            this.cadastrarTurmaToolStripMenuItem.Name = "cadastrarTurmaToolStripMenuItem";
+            this.cadastrarTurmaToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.cadastrarTurmaToolStripMenuItem.Text = "Cadastrar Turma";
+            this.cadastrarTurmaToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTurmaToolStripMenuItem_Click);
+            // 
+            // excluirTurmaToolStripMenuItem
+            // 
+            this.excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
+            this.excluirTurmaToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.excluirTurmaToolStripMenuItem.Text = "Excluir Turma";
+            this.excluirTurmaToolStripMenuItem.Click += new System.EventHandler(this.excluirTurmaToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -207,25 +226,6 @@ namespace Estudio
             this.label1.TabIndex = 0;
             this.label1.Text = "Login:";
             // 
-            // cadastrarTurmaToolStripMenuItem
-            // 
-            this.cadastrarTurmaToolStripMenuItem.Name = "cadastrarTurmaToolStripMenuItem";
-            this.cadastrarTurmaToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.cadastrarTurmaToolStripMenuItem.Text = "Cadastrar Turma";
-            this.cadastrarTurmaToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTurmaToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(233, 6);
-            // 
-            // excluirTurmaToolStripMenuItem
-            // 
-            this.excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
-            this.excluirTurmaToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.excluirTurmaToolStripMenuItem.Text = "Excluir Turma";
-            this.excluirTurmaToolStripMenuItem.Click += new System.EventHandler(this.excluirTurmaToolStripMenuItem_Click);
-            // 
             // MenuLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,6 +240,7 @@ namespace Estudio
             this.Name = "MenuLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estúdio";
+            this.Load += new System.EventHandler(this.MenuLogin_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.grpValidacao.ResumeLayout(false);

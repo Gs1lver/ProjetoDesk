@@ -21,6 +21,9 @@ namespace Estudio
                 Console.WriteLine("Conectado");
             else
                 Console.WriteLine("Erro de Conexão");
+
+            txtLogin.Text = "Isabela";
+            txtSenha.Text = "1234";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -108,6 +111,11 @@ namespace Estudio
         private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrirForm<ExcluirTurma>();
+        }
+
+        private void MenuLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
