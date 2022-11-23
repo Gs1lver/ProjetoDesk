@@ -30,8 +30,6 @@ namespace Estudio
         public void limparCampos()
         {
             cmbModalidadeTurma.SelectedIndex = 0;
-            cmbDiaSemanaTurma.Items.Clear();
-            cmbHoraTurma.Items.Clear();
         }
 
         private void btnExcluiTurma_Click(object sender, EventArgs e)
@@ -71,11 +69,16 @@ namespace Estudio
 
         private void cmbModalidadeTurma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbModalidadeTurma.SelectedIndex == -1)
-                return;
-
             cmbDiaSemanaTurma.Items.Clear();
             cmbHoraTurma.Items.Clear();
+            
+            if (cmbModalidadeTurma.SelectedIndex == 0)
+            {
+                cmbDiaSemanaTurma.Text = string.Empty;
+                cmbHoraTurma.Text = string.Empty;
+                return;
+            }
+
 
             DAO_Conexao.con.Open();
 
