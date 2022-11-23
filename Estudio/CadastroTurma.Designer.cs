@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grpTurmaCad = new System.Windows.Forms.GroupBox();
-            this.btnAtualizarTurma = new System.Windows.Forms.Button();
             this.mtxHoraTurma = new System.Windows.Forms.MaskedTextBox();
             this.txtDiaSemanaTurma = new System.Windows.Forms.TextBox();
             this.txtProfTurma = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             // 
             // grpTurmaCad
             // 
-            this.grpTurmaCad.Controls.Add(this.btnAtualizarTurma);
             this.grpTurmaCad.Controls.Add(this.mtxHoraTurma);
             this.grpTurmaCad.Controls.Add(this.txtDiaSemanaTurma);
             this.grpTurmaCad.Controls.Add(this.txtProfTurma);
@@ -64,15 +62,6 @@
             this.grpTurmaCad.TabIndex = 0;
             this.grpTurmaCad.TabStop = false;
             this.grpTurmaCad.Text = "Turma";
-            // 
-            // btnAtualizarTurma
-            // 
-            this.btnAtualizarTurma.Location = new System.Drawing.Point(334, 189);
-            this.btnAtualizarTurma.Name = "btnAtualizarTurma";
-            this.btnAtualizarTurma.Size = new System.Drawing.Size(186, 31);
-            this.btnAtualizarTurma.TabIndex = 6;
-            this.btnAtualizarTurma.Text = "Atualizar";
-            this.btnAtualizarTurma.UseVisualStyleBackColor = true;
             // 
             // mtxHoraTurma
             // 
@@ -214,7 +203,6 @@
         private System.Windows.Forms.Label lblHoraTurma;
         private System.Windows.Forms.MaskedTextBox mtxHoraTurma;
         private System.Windows.Forms.DataGridView dgvTurma;
-        private System.Windows.Forms.Button btnAtualizarTurma;
         private System.Windows.Forms.DataGridViewTextBoxColumn modalidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }

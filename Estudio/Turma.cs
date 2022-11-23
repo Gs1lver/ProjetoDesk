@@ -31,9 +31,10 @@ namespace Estudio
         {
             this.modalidade = modalidade;
         }  
-        public Turma (int modalidade, string dia_semana)
+        public Turma (int modalidade, string hora, string dia_semana)
         {
             this.modalidade = modalidade;
+            this.hora = hora;
             this.dia_semana = dia_semana;
         }
 
@@ -69,7 +70,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                var sql = "DELETE FROM Estudio_Turma WHERE idModalidade ='" + Modalidade + "' AND horaTurma = '" + Hora + "' AND diadasemanaTurma ='" + dia_semana + "'";
+                var sql = "DELETE FROM Estudio_Turma WHERE idModalidade ='" + modalidade + "' AND horaTurma = '" + hora + "' AND diadasemanaTurma ='" + dia_semana + "'";
                 MessageBox.Show(sql);
                 var inserir = new MySqlCommand(sql, DAO_Conexao.con);
                 inserir.ExecuteNonQuery();

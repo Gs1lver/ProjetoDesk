@@ -48,6 +48,19 @@ namespace Estudio
                 cmbDiaSemanaTurma.Focus();
                 return;
             }
+
+            try
+            {
+                var turma = new Turma(int.Parse(cmbModalidadeTurma.Text), cmbHoraTurma.Text, cmbDiaSemanaTurma.Text);
+                if(turma.excluirTurma())
+                    MessageBox.Show("Turma excluida com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Erro na exclusão.", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha todos os campos!", "Alerta do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cmbModalidadeTurma_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,9 +73,10 @@ namespace Estudio
             var sql1 = "SELECT idEstudio_Modalidade FROM Estudio_Modalidade WHERE descricaoModalidade ='" + cmbModalidadeTurma.Text + "'";
             var comando = new MySqlCommand(sql1, DAO_Conexao.con);
             var r1 = comando.ExecuteReader();
+            r1.Read();
 
-
-            var sql = "SELECT  FROM Estudio_Turma WHERE  ='" + cmbModalidadeTurma.Text + "'";
+            var sql = "SELECT * FROM Estudio_Turma WHERE idModalidade ='" + r1["idEstudio_Modalidade"].ToString() + "'";
+            r1.Dispose();
             var command = new MySqlCommand(sql, DAO_Conexao.con);
             var r = command.ExecuteReader();
 
@@ -71,7 +85,7 @@ namespace Estudio
                 cmbDiaSemanaTurma.Items.Add(r["diadasemanaTurma"]);
                 cmbHoraTurma.Items.Add(r["horaTurma"]);
             }
-
+            DAO_Conexao.con.Close();
             //pegar todas as turmas que tem a mesma modalidade selecionada, direto pela descricação 
         }
     }
