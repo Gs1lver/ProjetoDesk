@@ -87,6 +87,7 @@
             this.btnExcluiTurma.TabIndex = 3;
             this.btnExcluiTurma.Text = "Excluir";
             this.btnExcluiTurma.UseVisualStyleBackColor = true;
+            this.btnExcluiTurma.Click += new System.EventHandler(this.btnExcluiTurma_Click);
             // 
             // lblHoraExcluiTurma
             // 

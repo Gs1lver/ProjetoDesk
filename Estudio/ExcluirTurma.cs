@@ -17,5 +17,9 @@ namespace Estudio
             InitializeComponent();
         }
 
+        private void btnExcluiTurma_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

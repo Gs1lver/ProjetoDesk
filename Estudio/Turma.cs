@@ -41,25 +41,59 @@ namespace Estudio
         
         public bool cadastrarTurma()
         {
-            DAO_Conexao.con.Open();
-            string sql = "INSERT INTO Estudio_Turma (idModalidade, professorTurma, diadasemanaTurma, horaTurma ) values ('" + Modalidade + "','" + Professor + "','" + Dia_semana + "','" + Hora + "',)";
-            MessageBox.Show(sql);
-            MySqlCommand inserir = new MySqlCommand(sql, DAO_Conexao.con);
-            return true;
+            bool check = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                var sql = "INSERT INTO Estudio_Turma (idModalidade, professorTurma, diadasemanaTurma, horaTurma) values ('" + Modalidade + "','" + Professor + "','" + Dia_semana + "','" + Hora + "')";
+                //MessageBox.Show(sql);
+                var inserir = new MySqlCommand(sql, DAO_Conexao.con);
+                inserir.ExecuteNonQuery();
+                check = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return check;
         }
 
         
-        /*public bool excluirTurma()
+        public bool excluirTurma()
         {
-            DAO_Conexao.con.Open();
-        
+            var check = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                var sql = "DELETE FROM Estudio_Turma WHERE idModalidade ='" + Modalidade + "' AND horaTurma = '" + Hora + "' AND diadasemanaTurma ='" + dia_semana + "'";
+                MessageBox.Show(sql);
+                var inserir = new MySqlCommand(sql, DAO_Conexao.con);
+                inserir.ExecuteNonQuery();
+                check = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return check;
+
         }
+        
         /*
         public MySqlDataReader consultarTurma()
         {
-
+            DAO_Conexao.con.Open();
+            var sql = "SELECT * FROM Estudio"
         }
-        */
+        
 
         /*public MySqlDataReader consultarTurma01()
         {

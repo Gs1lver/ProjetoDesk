@@ -123,7 +123,7 @@ namespace Estudio
         internal MySqlDataReader consultarTodasModalidade()
         {
             DAO_Conexao.con.Open();
-            string sql = "SELECT * FROM Estudio_Modalidade";
+            string sql = "SELECT * FROM Estudio_Modalidade WHERE ativa = 0";
             MySqlCommand todos = new MySqlCommand(sql, DAO_Conexao.con);
             return todos.ExecuteReader();
         }
